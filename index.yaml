@@ -1,0 +1,65 @@
+apiVersion: v1
+entries:
+  grafana:
+  - apiVersion: v2
+    appVersion: 7.4.3
+    created: "2021-03-16T06:10:56.023110894Z"
+    description: The leading tool for querying and visualizing time series and metrics.
+    digest: ed17e0d036849a00f594154b51b760d348deed19c5bd5411bda932bd77b71a2c
+    home: https://grafana.net
+    icon: https://raw.githubusercontent.com/grafana/grafana/master/public/img/logo_transparent_400x.png
+    kubeVersion: ^1.8.0-0
+    maintainers:
+    - email: zanhsieh@gmail.com
+      name: zanhsieh
+    - email: rluckie@cisco.com
+      name: rtluckie
+    - email: maor.friedman@redhat.com
+      name: maorfr
+    - email: miroslav.hadzhiev@gmail.com
+      name: Xtigyro
+    - email: mail@torstenwalter.de
+      name: torstenwalter
+    name: grafana
+    sources:
+    - https://github.com/grafana/grafana
+    type: application
+    urls:
+    - https://github.com/Jivvon/monitoring-helm-charts/releases/download/grafana-6.6.3/grafana-6.6.3.tgz
+    version: 6.6.3
+  prometheus:
+  - apiVersion: v2
+    appVersion: 2.24.0
+    created: "2021-03-16T06:10:56.142759318Z"
+    dependencies:
+    - condition: kubeStateMetrics.enabled
+      name: kube-state-metrics
+      repository: https://kubernetes.github.io/kube-state-metrics
+      version: 2.13.*
+    description: Prometheus is a monitoring system and time series database.
+    digest: 99c02273992d5d96e11d8376028d6196c6d78bb8e02309f88ef74bfa8c7f36dc
+    home: https://prometheus.io/
+    icon: https://raw.githubusercontent.com/prometheus/prometheus.github.io/master/assets/prometheus_logo-cb55bb5c346.png
+    maintainers:
+    - email: gianrubio@gmail.com
+      name: gianrubio
+    - email: zanhsieh@gmail.com
+      name: zanhsieh
+    - email: miroslav.hadzhiev@gmail.com
+      name: Xtigyro
+    - email: monotek23@gmail.com
+      name: monotek
+    - email: naseem@transit.app
+      name: naseemkullah
+    name: prometheus
+    sources:
+    - https://github.com/prometheus/alertmanager
+    - https://github.com/prometheus/prometheus
+    - https://github.com/prometheus/pushgateway
+    - https://github.com/prometheus/node_exporter
+    - https://github.com/kubernetes/kube-state-metrics
+    type: application
+    urls:
+    - https://github.com/Jivvon/monitoring-helm-charts/releases/download/prometheus-13.6.0/prometheus-13.6.0.tgz
+    version: 13.6.0
+generated: "2021-03-16T06:10:55.887110959Z"
